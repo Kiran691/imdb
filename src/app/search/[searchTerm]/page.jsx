@@ -7,6 +7,8 @@ export default async function SearchPage({ params }) {
     );
 
   if(!res.ok){
+    // Added first line from chat gpt 
+    console.error("Error fetching data:", res.status, res.statusText);
     throw new Error("Error fetching data");
   }
 
@@ -22,3 +24,6 @@ export default async function SearchPage({ params }) {
     </div>
   );
 }
+
+
+
